@@ -16,8 +16,7 @@ python UAC_bypass_fodhelper.py "your command here"
 ```
 
 # Usage example
-Open cmd with administrator privilege:  
-python UAC_bypass_fodhelper.py "C:\Windows\System32\cmd.exe"  
-
-Execute commands that require administrator privilege directly:  
-python UAC_bypass_fodhelper.py "regedit"  
+Open command prompt with administrator privilege:  
+python UAC_bypass_fodhelper.py C:\Windows\System32\cmd.exe  
+Or  
+python UAC_bypass_fodhelper.py "PowerShell Start-Process -Verb RunAs cmd.exe"
