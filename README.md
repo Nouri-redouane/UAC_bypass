@@ -13,10 +13,23 @@ Windows Real-Time protection: Off.
 git clone https://github.com/Nouri-redouane/UAC_bypass
 cd UAC_bypass
 python UAC_bypass_fodhelper.py "your command here"
+python UAC_bypass_fodhelper_cleaner.py
 ```
 
-# Usage example
+> [!TIP]
+> when you finish using the bypass script, run the cleaner script to remove any thing modified by the bypass script to prevent changing the behaviour of other legitime functions on windows that needs the modified settings.
+
+# Usage examples
 Open command prompt with administrator privilege:  
 python UAC_bypass_fodhelper.py C:\Windows\System32\cmd.exe  
 Or  
 python UAC_bypass_fodhelper.py "PowerShell Start-Process -Verb RunAs cmd.exe"
+
+# Disclaimer
+> [!IMPORTANT]  
+> This script is provided for educational, informational and ethical hacking purposes.  
+> The intent of creating and sharing this script is to enhance knowledge and understanding of cybersecurity and ethical hacking.  
+> Use this script responsibly and only on systems for which you have explicit permission.  
+> The author is not responsible for any misuse, damage, or legal consequences that may arise from using this script.  
+> By using this script, you agree to do so at your own risk.
+

