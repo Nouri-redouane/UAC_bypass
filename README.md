@@ -1,12 +1,13 @@
 # UAC_bypass
-this python script is the implementation of the UAC (User Account Control) bypass by exploiting a vulnerability in the fodhelper.exe (a legitimate Windows binary responsible for handling Features on Demand).
+This python script is the implementation of the UAC (User Account Control) bypass by exploiting a vulnerability in the fodhelper.exe (a legitimate Windows binary responsible for handling Features on Demand).
 
-supported windows versions: 7, 8, 2008, 2012, 10.
+Supported windows versions: __7, 8, 2008, 2012, 10__.
 
 # Testing platform 
-OS Name: Microsoft Windows 10 Pro.  
-OS Version: 10.0.19045 N/A Build 19045.  
-Windows Real-Time protection: Off.
+OS Name: `Microsoft Windows 10 Pro`.  
+OS Version: `10.0.19045 N/A Build 19045`.  
+Windows Real-Time protection: `Off`.  
+I tested it with the `On` option to open the command prompt as an administrator but the command prompt shows for less then 03 seconds and got closed by windows defender.
 
 # How to use
 ```bash
